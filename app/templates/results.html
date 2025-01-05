@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pain Points for {{ company_name }}</title>
+    <style>
+        body { padding: 20px; font-family: Arial, sans-serif; }
+        .pain-point { margin: 10px 0; padding: 10px; background: #f5f5f5; }
+    </style>
+</head>
+<body>
+    <h1>Pain Points for {{ company_name }}</h1>
+    <div class="results">
+        {% if pain_points %}
+            <ul>
+            {% for pain_point in pain_points %}
+                <li class="pain-point">{{ pain_point }}</li>
+            {% endfor %}
+            </ul>
+        {% else %}
+            <p>No pain points found.</p>
+        {% endif %}
+    </div>
+    <p><a href="/">Back to Search</a></p>
+</body>
+</html>
+   
